@@ -29,21 +29,15 @@ func ReceiveWebhook(c *gin.Context) {
 
 	//Display name for Test Runner
 	var tester string
-	var memberId int8 = body.TeamMemberID // George, DH, Juni, Dunkin, Sam, heejung
+	var memberId int8 = body.TeamMemberID // You requires to add your team Member from
 
 	switch memberId {
 	case 1:
-		tester = "George"
+		tester = "QA_1"
 	case 2:
-		tester = "DH"
+		tester = "QA_2"
 	case 3:
-		tester = "Juni"
-	case 4:
-		tester = "Dunkin"
-	case 5:
-		tester = "Sam"
-	case 6:
-		tester = "Heejung"
+		tester = "QA_3"
 	default:
 		tester = "QA"
 	}
@@ -51,26 +45,10 @@ func ReceiveWebhook(c *gin.Context) {
 	// Display project name by ProjectCode
 	var projectName string = body.ProjectCode
 	switch projectName {
-	case "PLUS":
-		projectName = "Pivo+"
-	case "PIVOLIVE":
-		projectName = "Pivo Live"
-	case "PIVOTOUR":
-		projectName = "Pivo Tour"
-	case "PLAY":
-		projectName = "Pivo Play"
-	case "CAST":
-		projectName = "Pivo Cast"
-	case "PRESENT":
-		projectName = "Pivo Present"
-	case "STUDIO":
-		projectName = "Pivo Studio"
-	case "BP":
-		projectName = "Beamo Portal"
-	case "BA":
-		projectName = "Beamo App"
-	case "MF":
-		projectName = "Pivo Meet Frontend"
+	case "PROJECT_1_CODE":
+		projectName = "PROJECT_1_NAME"
+	case "PROJECT_2_CODE":
+		projectName = "PROJECT_2_NAME"
 	default:
 	}
 
